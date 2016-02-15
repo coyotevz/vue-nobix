@@ -1,22 +1,24 @@
 <template>
-  <div id="app">
-    <img class="logo" src="./assets/logo.png">
-    <hello></hello>
+  <div class="wrapper">
+    <header>
+      <appbar></appbar>
+    </header>
+
+    <main></main>
+    <footer></footer>
+
   </div>
 </template>
 
 <script>
-var Hello = require('./components/hello');
+var Appbar = require('./components/appbar');
 
 module.exports = {
   components: {
-    'hello': Hello,
+    'appbar': Appbar,
   },
 };
 </script>
 
-<style>
-body {
-  font-family: 'Roboto', sans-serif;
-}
+<style lang="scss" src="./assets/style.scss">
 </style>
