@@ -92,4 +92,60 @@ nav.appbar {
     justify-content: flex-end;
   }
 }
+
+nav.appbar {
+  z-index: 490;
+  transition: background-color .15s;
+
+  a.action-back {
+    display: none;
+  }
+
+  .searchbox {
+    background-color: rgba(255,255,255,0.15);
+    border-radius: 2px;
+    display: flex;
+    transition: background-color .15s;
+
+    &:hover {
+      background-color: rgba(255,255,255,0.25);
+    }
+
+    .search-icon {
+      flex: 1 1 auto;
+      text-align: center;
+
+      i {
+        font-size: 1.6rem;
+        line-height: 36px;
+        height: 36px;
+        display: inline-block;
+        cursor: default;
+      }
+    }
+
+    .search-input {
+      flex: 11 1 auto;
+    }
+
+    input[type="search"] {
+      border: none;
+      background-color: transparent;
+      color: #fff;
+      display: block;
+      height: 36px;
+      padding-right: 10px;
+      font-size: 16px;
+      margin: 0;
+
+      &::-moz-placeholder {
+        color: #fff;
+        opacity: 0.7;
+      }
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+}
 </style>
