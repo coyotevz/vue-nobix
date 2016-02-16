@@ -28,3 +28,103 @@ module.exports = {
   },
 };
 </script>
+
+<style lang="scss">
+@import "../assets/materialize";
+
+.list {
+  @extend .collection;
+  display: table;
+  width: 100%;
+
+  li {
+    @extend .collection-item;
+    font-size: 14px;
+    display: table-row;
+    border-bottom: 1px solid #d0d0d0;
+
+    div {
+      @extend .truncate;
+      display: table-cell;
+      padding-right: 20px;
+      line-height: 48px;
+      border-bottom: 1px solid #ececec;
+      border-left: 2px solid transparent;
+      position: relative;
+    }
+
+    .iconimg {
+      padding-left: 24px;
+      width: 72px;
+
+      .avatar-circle {
+        border-radius: 50%;
+        height: 28px;
+        width: 28px;
+        position: absolute;
+        left: 20px;
+        top: 10px;
+        z-index: 2;
+      }
+    }
+
+    .description,
+    .name {
+      width: 20%;
+      padding-right: 15px;
+      a {
+        color: #444;
+        font-weight: bold;
+        &:hover { text-decoration: underline; }
+      }
+    }
+    .col3 { width: 25%; }
+    .col4 { width: 22%; }
+    .actions { width: 33% }
+
+    &:last-child {
+      div { border-bottom: none; }
+    }
+
+    [type="checkbox"] + label {
+      display: inline;
+      line-height: 48px;
+      padding-left: 20px;
+    }
+
+    .filled-in[type="checkbox"] {
+      &,
+      &:checked {
+        + label:before,
+        + label:after {
+          transition-property: none;
+        }
+      }
+
+      &:checked {
+        + label:before {
+          top: 1px;
+        }
+        +label:after {
+          background-color: #5a5a5a;
+          border-color: #5a5a5a;
+        }
+      }
+    }
+
+    &:active,
+    &.active {
+      dif:first-child {
+        border-left: 2px solid #427fed;
+      }
+    }
+  }
+
+  &.selection,
+  &.selectable li:hover {
+    .avatar-circle {
+      display: none;
+    }
+  }
+}
+</style>
