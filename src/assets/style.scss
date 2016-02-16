@@ -1,20 +1,24 @@
 @charset "utf-8";
 
-// Mixins
-@import "~materialize-css/sass/components/mixins";
-@import "~materialize-css/sass/components/color";
+@import "materialize";
 
-// Variables
-@import "~materialize-css/sass/components/variables";
+// Commons styles
+body {
+  background-color: #ececec;
+  overflow-y: scroll;
+}
 
-// Custom Variables
-@import "./style/variables";
+html, body, .wrapper {
+  height: 100%;
+}
 
-// Reset
-@import "~materialize-css/sass/components/normalize";
-
-// Common components
-@import "~materialize-css/sass/components/global";
-@import "~materialize-css/sass/components/grid";
-@import "./style/roboto";
-@import "~materialize-css/sass/components/typography";
+// Clean link outline
+a {
+  &,
+  &:active,
+  &:focus,
+  &:hover {
+    outline: 0 none;
+    cursor: pointer;
+  }
+}

@@ -17,7 +17,7 @@ module.exports = {
 </script>
 
 <style lang="scss">
-@import "../../assets/style";
+@import "../../assets/style/variables";
 
 .icon-toggle {
   width: $button-floating-size;

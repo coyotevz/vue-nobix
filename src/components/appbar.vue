@@ -149,4 +149,8 @@ nav.appbar {
     }
   }
 }
+
+main {
+  padding-top: $appbar-height;
+}
 </style>

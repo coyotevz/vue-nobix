@@ -1,21 +1,27 @@
 <template>
-  <div class="wrapper">
-    <header>
-      <appbar></appbar>
-    </header>
+<div class="wrapper">
+  <header>
+    <appbar></appbar>
+  </header>
 
-    <main></main>
-    <footer></footer>
+  <main>
+    <module-content></module-content>
+  </main>
 
-  </div>
+  <footer>
+  </footer>
+
+</div>
 </template>
 
 <script>
 var Appbar = require('./components/appbar');
+var ModuleContent = require('./components/module_content');
 
 module.exports = {
   components: {
     'appbar': Appbar,
+    'module-content': ModuleContent,
   },
 };
 </script>
