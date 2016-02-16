@@ -18,9 +18,9 @@
         </div>
       </div>
       <div class="toolbox col s3">
-        <a class="icon-toggle"><icon name="alarm"></icon></a>
-        <a class="icon-toggle disabled"><icon name="refresh"></icon></a>
-        <a class="icon-toggle"><icon name="more_vert"></icon></a>
+        <icon-toggle name="alarm"></icon-toggle>
+        <icon-toggle name="refresh" disabled></icon-toggle>
+        <icon-toggle name="more_vert"></icon-toggle>
       </div>
     </div>
   </nav>
@@ -30,6 +30,7 @@
 module.exports = {
   components: {
     'icon': require('./ui/icon'),
+    'icon-toggle': require('./ui/icon-toggle'),
   },
 };
 </script>
