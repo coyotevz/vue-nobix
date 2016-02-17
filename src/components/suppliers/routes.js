@@ -1,5 +1,7 @@
 module.exports = {
-  component: require('./index.vue'),
+  component: {
+    template: '<router-view></router-view>',
+  },
 
   subRoutes: {
     '/': {
