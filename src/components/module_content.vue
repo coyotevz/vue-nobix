@@ -9,7 +9,7 @@
 </template>
 
 <script>
-var SupplierList = require('./supplier_list');
+var SupplierList = require('./suppliers/list');
 module.exports = {
   components: {
     'supplier-list': SupplierList,

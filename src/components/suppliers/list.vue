@@ -2,7 +2,7 @@
   <ul class="list suppliers-list selectable">
     <li class="list-item" v-for="supplier in suppliers">
       <div class="iconimg">
-        <img class="avatar-circle" src="../assets/image/photo.jpg">
+        <img class="avatar-circle" src="~assets/image/photo.jpg">
         <input id="supplier_item_{{ supplier.id }}" type="checkbox" class="filled-in"/>
         <label for="supplier_item_{{ supplier.id }}"></label>
       </div>
@@ -30,7 +30,7 @@ module.exports = {
 </script>
 
 <style lang="scss">
-@import "../assets/materialize";
+@import "~assets/materialize.scss";
 
 .list {
   @extend .collection;

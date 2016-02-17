@@ -3,9 +3,7 @@ module.exports = {
 
   subRoutes: {
     '/': {
-      component: {
-        template: '<p>suppliers root</p>',
-      },
+      component: require('./list.vue'),
     },
 
     '/:id': {
