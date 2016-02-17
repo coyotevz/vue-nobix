@@ -13,4 +13,8 @@ router.map({
   '/suppliers': require('./components/suppliers/routes'),
 });
 
+router.afterEach(function(transition) {
+  console.log('app:', transition.to.router.app);
+});
+
 router.start(Application, '#application');
