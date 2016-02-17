@@ -6,6 +6,7 @@
 
   <main>
     <module-content></module-content>
+    <router-view></router-view>
   </main>
 
   <footer>
