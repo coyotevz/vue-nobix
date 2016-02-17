@@ -9,7 +9,7 @@ module.exports = {
 </script>
 
 <style lang="scss">
-$icons-font-path: "../assets/font/material-design-icons/";
+$icons-font-path: "~assets/font/material-design-icons/";
 
 @font-face {
   font-family: 'Material Icons';

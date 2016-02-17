@@ -36,7 +36,7 @@ module.exports = {
 </script>
 
 <style lang="scss">
-@import "../assets/style";
+@import "~assets/style";
 @import "~materialize-css/sass/components/navbar";
 
 $appbar-height: 56px;
