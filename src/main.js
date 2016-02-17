@@ -13,6 +13,10 @@ router.map({
   '/suppliers': require('./components/suppliers/routes'),
 });
 
+router.redirect({
+  '/': '/suppliers',
+});
+
 router.afterEach(function(transition) {
   console.log('app:', transition.to.router.app);
 });
