@@ -6,6 +6,9 @@ require('./assets/style.scss');
 
 // install router
 Vue.use(Router);
+// install & config resources
+Vue.use(require('vue-resource'));
+Vue.http.options.root = 'testapi/root';
 
 var router = new Router();
 
@@ -17,8 +20,8 @@ router.redirect({
   '/': '/suppliers',
 });
 
-router.afterEach(function(transition) {
-  console.log('app:', transition.to.router.app);
+router.afterEach(function(u_transition) {
+  //console.log('app:', transition.to.router.app);
 });
 
 router.start(Application, '#application');

@@ -1,13 +1,13 @@
 <template>
   <p v-show="$loadingRouteData" style="color: red;">Loading ...</p>
-  <selectable-list :extraclass="suppliers-list" v-show="!$laodingRouteData">
+  <selectable-list class="suppliers-list" v-show="!$laodingRouteData">
     <li class="list-item" v-for="supplier in suppliers">
-      <div class="iconimg">
-        <img class="avatar-circle" src="~assets/image/photo.jpg">
-        <input id="supplier_item_{{ supplier.id }}" type="checkbox" class="filled-in"/>
-        <label for="supplier_item_{{ supplier.id }}"></label>
-      </div>
-      <div class="name"><a v-link="{ name: 'suppliers.detail', params: { id: supplier.id }}">{{ supplier.name }}</a></div>
+      <iconimg :image="'photo.jpg'" :id="'supplier_item_' + supplier.id"></iconimg>
+      <div class="name">
+        <a v-link="{ name: 'suppliers.detail', params: { id: supplier.id }}">
+          {{ supplier.name }}
+        </a>
+        </div>
       <div class="col3"></div>
       <div class="col4"></div>
       <div class="actions"></div>
@@ -17,10 +17,21 @@
 
 <script>
 var selectable_list = require('../ui/selectable_list');
+var iconimg = require('../ui/iconimg');
 
 module.exports = {
+  http: {
+    root: 'supplires/route',
+  },
   route: {
     data: function(transition) {
+      // GET request
+      this.$http.get({url: '/suppliers', method: 'GET'}).then(function(response) {
+        // success callback
+        console.log('response:', response);
+      }, function(u_response) {
+        // error callback
+      });
       setTimeout(function() {
         transition.next({
           suppliers: [
@@ -42,6 +53,7 @@ module.exports = {
 
   components: {
     'selectable-list': selectable_list,
+    'iconimg': iconimg,
   },
 };
 </script>
