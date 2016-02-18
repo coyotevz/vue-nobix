@@ -3,15 +3,13 @@
 </template>
 
 <script>
-var icon = require('./icon');
-
 module.exports = {
   props: {
     name: String,
     disabled: Boolean,
   },
   components: {
-    'icon': icon,
+    'icon': require('./icon'),
   },
 };
 </script>

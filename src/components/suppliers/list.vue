@@ -17,8 +17,6 @@
 
 <script>
 /* global config */
-var selectable = require('../ui/selectable-list');
-var iconimg = require('../ui/iconimg');
 
 module.exports = {
   route: {
@@ -40,8 +38,8 @@ module.exports = {
   },
 
   components: {
-    'selectable-list': selectable,
-    'iconimg': iconimg,
+    'selectable-list': require('../ui/selectable-list'),
+    'iconimg': require('../ui/iconimg'),
   },
 };
 </script>
