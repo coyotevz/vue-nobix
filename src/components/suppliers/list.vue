@@ -21,11 +21,12 @@ var iconimg = require('../ui/iconimg');
 
 module.exports = {
   http: {
-    root: 'supplires/route',
+    root: 'suppliers/route',
   },
   route: {
     data: function(transition) {
       // GET request
+      window.vue = this;
       this.$http.get({url: '/suppliers', method: 'GET'}).then(function(response) {
         // success callback
         console.log('response:', response);
