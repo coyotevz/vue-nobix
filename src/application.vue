@@ -16,7 +16,7 @@
 
 <script>
 var Appbar = require('./components/appbar');
-var ModuleContent = require('./components/module_content');
+var ModuleContent = require('./components/module-content');
 
 module.exports = {
   components: {
