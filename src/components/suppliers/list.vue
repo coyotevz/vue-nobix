@@ -16,33 +16,20 @@
 </template>
 
 <script>
+/* global config */
 var selectable_list = require('../ui/selectable_list');
 var iconimg = require('../ui/iconimg');
 
 module.exports = {
-  http: {
-    root: 'suppliers/route',
-  },
   route: {
     data: function(transition) {
-      // GET request
-      window.vue = this;
-      this.$http.get({url: '/suppliers', method: 'GET'}).then(function(response) {
-        // success callback
-        console.log('response:', response);
+      this.$http.get(config.urlRoot + '/suppliers').then(function(response) {
+        transition.next({
+          suppliers: response.data.objects,
+        });
       }, function(u_response) {
         // error callback
       });
-      setTimeout(function() {
-        transition.next({
-          suppliers: [
-            { id: 1, name: 'Supplier 1' },
-            { id: 2, name: 'Supplier 2' },
-            { id: 3, name: 'Supplier 3' },
-            { id: 4, name: 'Supplier 4' },
-          ],
-        });
-      }, 1000);
     },
   },
 
