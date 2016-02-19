@@ -1,5 +1,5 @@
 <template>
-  <p v-show="$loadingRouteData" style="color: red;">Loading ...</p>
+  <preloader colors="blue" size="small" class="center" v-show="$loadingRouteData"></preloader>
   <selectable-list class="suppliers-list" v-show="!$laodingRouteData">
     <li class="list-item" v-for="supplier in suppliers">
       <iconimg :image="'photo.jpg'" :id="'supplier_item_' + supplier.id"></iconimg>
@@ -40,6 +40,7 @@ module.exports = {
   components: {
     'selectable-list': require('../ui/selectable-list'),
     'iconimg': require('../ui/iconimg'),
+    'preloader': require('../ui/preloader-circular'),
   },
 };
 </script>
