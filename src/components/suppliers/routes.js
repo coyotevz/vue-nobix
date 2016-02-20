@@ -12,9 +12,7 @@ module.exports = {
 
     '/:id': {
       name: 'suppliers.detail',
-      component: {
-        template: '<p>supplier #{{ $route.params.id }}</p>',
-      },
+      component: require('./detail.vue'),
     },
   },
 };
