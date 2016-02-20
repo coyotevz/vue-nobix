@@ -22,8 +22,8 @@ module.exports = {
     'size': {
       validaor: function(value) {
         return Boolean(['small', 'big'].indexOf(value) + 1);
-      }
-    }
+      },
+    },
   },
 
   beforeCompile: function() {
