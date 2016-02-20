@@ -10,7 +10,8 @@ module.exports = {
 
   route: {
     data: function(transition) {
-      this.$http.get(config.urlRoot + '/suppliers/' + transition.to.params.id).then(function(response) {
+      var id = transition.to.params.id;
+      this.$http.get(config.urlRoot + '/suppliers/' + id).then(function(response) {
         transition.next({
           supplier: response.data,
         });
