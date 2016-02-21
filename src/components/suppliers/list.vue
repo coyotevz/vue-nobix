@@ -1,6 +1,9 @@
 <template>
-  <preloader colors="blue" size="small" class="center" v-show="$loadingRouteData"></preloader>
-  <selectable-list class="suppliers-list" v-show="!$laodingRouteData">
+  <div class="valign-wrapper suppliers-list" v-show="$loadingRouteData || suppliers.length === 0">
+    <preloader colors="blue" size="small" class="center" v-show="$loadingRouteData"></preloader>
+    <h3 class="valign center-align void-data" v-show="!$loadingRouteData && suppliers.length === 0">No existen proveedores</h3>
+  </div>
+  <selectable-list class="suppliers-list" v-show="!$laodingRouteData && suppliers.length !== 0">
     <li class="list-item" v-for="supplier in suppliers">
       <iconimg :image="'photo.jpg'" :id="'supplier_item_' + supplier.id"></iconimg>
       <div class="name">
@@ -44,3 +47,20 @@ module.exports = {
   },
 };
 </script>
+
+<style lang="scss">
+.suppliers-list.valign-wrapper {
+  height: 300px;
+}
+.void-data {
+  font-family: "RobotoCondensed";
+  font-weight: 500;
+  color: rgba(200,200,200,0.8);
+  text-shadow: 1px 4px 6px #ececec, 0 0 0 #000, 1px 4px 6px #ececec;
+  margin-left: auto;
+  margin-right: auto;
+  &::selection {
+    text-shadow: none;
+  }
+}
+</style>
