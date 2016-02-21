@@ -1,6 +1,12 @@
 <template>
   <preloader colors="blue" size="small" class="center" v-show="$loadingRouteData"></preloader>
-  <h3>Supplier #{{ supplier.id }}, {{ supplier.name }}</h3>
+  <profile-card
+    obj="supplier"
+    bg_image="'supplier-profile-bg.jpg'"
+    profile_image="'supplier-icon.png'"
+    v-show="!$loadingRouteData"
+  ></profile-card>
+  <h3 v-show="!$loadingRouteData">Supplier #{{ supplier.id }}, {{ supplier.name }}</h3>
 </template>
 
 <script>
@@ -29,6 +35,7 @@ module.exports = {
 
   components: {
     'preloader': require('../ui/preloader-circular'),
+    'profile-card': require('../profile-card'),
   },
 };
 </script>
