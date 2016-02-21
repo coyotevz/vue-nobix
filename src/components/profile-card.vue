@@ -9,26 +9,13 @@
             alt="profile icon" :src="profile_image_path">
         </figure>
         <div slot="content" class="row">
-          <div class="col s3 offset-s2">
-            <h4 class="card-title grey-text text-darken-4" v-pre>{{ supplier.name }}</h4>
-            <p class="medium-small grey-text">Marcas</p>
-          </div>
-          <div class="col s2 center-align">
-            <h4 class="card-title grey-text text-darken-4">7 días</h4>
-            <p class="medium-small grey-text">Froma de Pago</p>
-          </div>
-          <div class="col s2 center-align">
-            <h4 class="card-title grey-text text-darken-4">420</h4>
-            <p class="medium-small grey-text">Prodcutos activos</p>
-          </div>
-          <div class="col s2 center-align">
-            <h4 class="card-title grey-text text-darken-4">$ 5.680,45</h4>
-            <p class="medium-small grey-text">Comprados</p>
-          </div>
+          <slot name="footer-content"></slot>
           <div class="col s1 right-align">
-            <a class="btn-floating activator waves-effect waves-light blue-grey darken-1 right">
-              <icon name="keyboard_arrow_up"></icon>
-            </a>
+            <button
+              :type="'floating'"
+              :icon-name="'keyboard_arrow_up'"
+              class="activator waves-effect waves-light blue-grey darken-1 right"
+            ></button>
           </div>
         </div>
         <template slot="reveal-content">
@@ -63,7 +50,7 @@ module.exports = {
 
   components: {
     'card-reveal': require('./ui/card-reveal'),
-    'icon': require('./ui/icon'),
+    'button': require('./ui/button'),
   },
 
   computed: {
@@ -71,9 +58,7 @@ module.exports = {
       return require('../assets/image/' + this.bg_image);
     },
     profile_image_path: function() {
-      var rv = require('../assets/image/' + this.profile_image);
-      console.log('rv:', rv);
-      return rv;
+      return require('../assets/image/' + this.profile_image);
     },
   },
 };
@@ -84,6 +69,7 @@ module.exports = {
   .card {
     .card-image {
       height: 250px;
+      overflow: hidden;
     }
     .card-profile-image {
       cursor: pointer;

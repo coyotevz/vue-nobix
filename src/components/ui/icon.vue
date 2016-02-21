@@ -1,10 +1,10 @@
 <template>
-<i class="material-icons">{{ name }}</i>
+<i :class="['material-icons',pos?pos:'']">{{ name }}</i>
 </template>
 
 <script>
 module.exports = {
-  props: ['name'],
+  props: ['name', 'pos'],
 };
 </script>
 

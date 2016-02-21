@@ -2,16 +2,33 @@
   <preloader colors="blue" size="small" class="center" v-show="$loadingRouteData"></preloader>
   <profile-card
     obj="supplier"
-    bg_image="'supplier-profile-bg.jpg'"
-    profile_image="'supplier-icon.png'"
+    bg_image="supplier-profile-bg.jpg"
+    :profile_image="'supplier-icon.png'"
     v-show="!$loadingRouteData"
-  ></profile-card>
-  <h3 v-show="!$loadingRouteData">Supplier #{{ supplier.id }}, {{ supplier.name }}</h3>
+  >
+    <template slot="footer-content">
+      <div class="col s3 offset-s2">
+        <h4 class="card-title grey-text text-darken-4">{{ supplier.name }}</h4>
+        <p class="medium-small grey-text">Marcas</p>
+      </div>
+      <div class="col s2 center-align">
+        <h4 class="card-title grey-text text-darken-4">7 días</h4>
+        <p class="medium-small grey-text">Froma de Pago</p>
+      </div>
+      <div class="col s2 center-align">
+        <h4 class="card-title grey-text text-darken-4">420</h4>
+        <p class="medium-small grey-text">Productos activos</p>
+      </div>
+      <div class="col s2 center-align">
+        <h4 class="card-title grey-text text-darken-4">$ 5.680,45</h4>
+        <p class="medium-small grey-text">Comprados</p>
+      </div>
+    </template>
+  </profile-card>
 </template>
 
 <script>
 /* global config */
-
 module.exports = {
 
   route: {
