@@ -41,7 +41,7 @@ module.exports = {
           supplier: response.data,
         });
       }, function(u_response) {
-        // error callback
+        console.log('error', u_response);
       });
     },
   },

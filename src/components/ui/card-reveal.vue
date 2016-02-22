@@ -21,11 +21,11 @@
 
 <script>
 require('materialize-css/js/waves');
+var activateCards = require('./js/cards');
 
 module.exports = {
   ready: function () {
-    console.log('ready hook');
+    activateCards(this.$el);
   },
 };
-
 </script>
