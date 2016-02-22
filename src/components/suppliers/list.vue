@@ -9,9 +9,13 @@
       v-show="!$loadingRouteData && suppliers.length === 0"
     >No existen proveedores</span>
   </div>
-  <selectable-list class="suppliers-list" v-show="!$laodingRouteData && suppliers.length !== 0">
+  <selectable-list class="suppliers-list"
+    v-show="!$laodingRouteData && suppliers.length !== 0"
+  >
     <li class="list-item" v-for="supplier in suppliers">
-      <iconimg :image="'photo.jpg'" :id="'supplier_item_' + supplier.id"></iconimg>
+      <iconimg :image="'photo.jpg'"
+        :id="'supplier_item_' + supplier.id"
+      ></iconimg>
       <div class="name">
         <a v-link="{ name: 'suppliers.detail', params: { id: supplier.id }}">
           {{ supplier.name }}
