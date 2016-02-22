@@ -16,7 +16,7 @@
         <a v-link="{ name: 'suppliers.detail', params: { id: supplier.id }}">
           {{ supplier.name }}
         </a>
-        </div>
+      </div>
       <div class="col3"></div>
       <div class="col4"></div>
       <div class="actions"></div>
