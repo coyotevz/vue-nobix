@@ -1,9 +1,11 @@
 <template>
-  <preloader colors="blue" size="small" class="center" v-show="$loadingRouteData"></preloader>
+  <div class="valign-wrapper supplier-detail" v-show="$loadingRouteData">
+    <preloader colors="blue" size="small" class="center"></preloader>
+  </div>
   <profile-card
     obj="supplier"
-    bg_image="supplier-profile-bg.jpg"
-    :profile_image="'supplier-icon.png'"
+    :bg-image="'supplier-profile-bg.jpg'"
+    :profile-image="'supplier-icon.png'"
     v-show="!$loadingRouteData"
   >
     <template slot="footer-content">
@@ -56,3 +58,9 @@ module.exports = {
   },
 };
 </script>
+
+<style lang="scss">
+.supplier-detail.valign-wrapper {
+  height: 300px;
+}
+</style>

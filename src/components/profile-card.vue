@@ -3,10 +3,10 @@
     <div class="col s12">
       <card-reveal :class="obj+'-profile-header'">
         <img slot="card-image" class="activator"
-          alt="profile background" :src="bg_image_path">
+          alt="profile background" :src="bgImagePath">
         <figure slot="pre-content" class="card-profile-image">
           <img class="circle z-depth-2 responsive-img activator"
-            alt="profile icon" :src="profile_image_path">
+            alt="profile icon" :src="profileImagePath">
         </figure>
         <div slot="content" class="row">
           <slot name="footer-content"></slot>
@@ -38,11 +38,11 @@ module.exports = {
       type: String,
       required: true,
     },
-    bg_image: {
+    bgImage: {
       type: String,
       required: true,
     },
-    profile_image: {
+    profileImage: {
       type: String,
       required: true,
     },
@@ -54,11 +54,11 @@ module.exports = {
   },
 
   computed: {
-    bg_image_path: function() {
-      return require('../assets/image/' + this.bg_image);
+    bgImagePath: function() {
+      return require('../assets/image/' + this.bgImage);
     },
-    profile_image_path: function() {
-      return require('../assets/image/' + this.profile_image);
+    profileImagePath: function() {
+      return require('../assets/image/' + this.profileImage);
     },
   },
 };
