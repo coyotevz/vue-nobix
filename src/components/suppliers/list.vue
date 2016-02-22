@@ -61,7 +61,7 @@ module.exports = {
 .message-void-data {
   font-family: "Roboto Condensed";
   font-weight: 700;
-  font-size: 40px;
+  font-size: 36px;
   color: rgba(168, 168, 168, 0.4);
   margin-left: auto;
   margin-right: auto;
