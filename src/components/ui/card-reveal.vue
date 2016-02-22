@@ -16,21 +16,16 @@
 <style lang="scss">
 @import "~assets/style";
 @import "~materialize-css/sass/components/cards";
+@import "~materialize-css/sass/components/waves";
 </style>
 
 <script>
+require('materialize-css/js/waves');
+
 module.exports = {
-  created: function () {
-    console.log('created hook');
-  },
-  beforeCompile: function () {
-    console.log('beforeCompile hook');
-  },
-  compiled: function() {
-    console.log('compiled hook');
-  },
   ready: function () {
     console.log('ready hook');
   },
 };
+
 </script>
