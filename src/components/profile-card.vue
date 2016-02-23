@@ -20,10 +20,13 @@
         </div>
         <template slot="reveal-content">
           <div class="row card-title gray-text text-darken-4">
-            title
+            <slot name="body-title"></slot>
+            <icon-toggle class="waves-effect action-edit left" name="edit">
+            </icon-toggle>
+            <icon class="right" name="close"></icon>
           </div>
           <div class="row card-reveal-content">
-            content
+            <slot name="body-content"></slot>
           </div>
         </template>
       </card-reveal>
@@ -51,6 +54,8 @@ module.exports = {
   components: {
     'card-reveal': require('./ui/card-reveal'),
     'button': require('./ui/button'),
+    'icon': require('./ui/icon'),
+    'icon-toggle': require('./ui/icon-toggle.vue'),
   },
 
   computed: {

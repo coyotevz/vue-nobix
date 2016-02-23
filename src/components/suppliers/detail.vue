@@ -26,6 +26,19 @@
         <p class="medium-small grey-text">Comprados</p>
       </div>
     </template>
+    <span slot="body-title" class="supplier-name">{{ supplier.name }}</span>
+    <template slot="body-content">
+      <div class="col m4">
+        <p>Av. Congreso385 - CBA<br><span class="grey-text">Domicilio</span></p>
+      </div>
+      <div class="col m4">
+        <p>30-71128142-4<br><span class="grey-text">CUIT</span></p>
+      </div>
+      <div class="col m4">
+        <p>ventas@ferrum.com.ar<br><span class="grey-text">e-mail</span></p>
+      </div>
+    </template>
+
   </profile-card>
 </template>
 
