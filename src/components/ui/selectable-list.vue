@@ -110,7 +110,7 @@ module.exports = {
 
     &:active,
     &.active {
-      dif:first-child {
+      div:first-child {
         border-left: 2px solid #427fed;
       }
     }
