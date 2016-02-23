@@ -2,9 +2,8 @@
 var $ = window.$ = window.jQuery = require('jquery');
 require('velocity-animate');
 
-module.exports = function(u_element) {
-
-  $(document).on('click.card', '.card', function(e) {
+module.exports = function(card_element) {
+  $(card_element).on('click.card', function(e) {
     var $this = $(this);
     var $target = $(e.target);
     if ($this.find('> .card-reveal').length) {
