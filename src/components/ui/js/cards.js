@@ -7,7 +7,6 @@ module.exports = function(u_element) {
   $(document).on('click.card', '.card', function(e) {
     var $this = $(this);
     var $target = $(e.target);
-    console.log($this, $target);
     if ($this.find('> .card-reveal').length) {
       if ($target.is('.card-reveal .card-title') || $target.is('.card-reveal .card-title i')) {
         $this.find('.card-reveal')
@@ -33,7 +32,7 @@ module.exports = function(u_element) {
       }
     }
 
-    $('.card-reveal').closests('.card').css('overflow', 'hidden');
+    $('.card-reveal').closest('.card').css('overflow', 'hidden');
   });
 
 };
