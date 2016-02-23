@@ -73,6 +73,10 @@ module.exports = {
 </script>
 
 <style lang="scss">
+.supplier-name {
+    cursor: default;
+    float: left;
+}
 .supplier-detail.valign-wrapper {
   height: 300px;
 }
