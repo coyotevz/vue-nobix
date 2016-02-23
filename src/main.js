@@ -10,7 +10,7 @@ Vue.use(Router);
 Vue.use(require('vue-resource'));
 Vue.http.options.root = 'testapi/root';
 
-window.Vue = Vue;
+Vue.config.debug = true;
 
 var router = new Router();
 
